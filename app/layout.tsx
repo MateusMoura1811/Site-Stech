@@ -49,8 +49,8 @@ export default function RootLayout({
     <html lang="pt-BR" className="bg-[#0a0f18]">
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
-         <FloatingSquares />
+        <Analytics />
+        <FloatingSquares />
       </body>
     </html>
   );
