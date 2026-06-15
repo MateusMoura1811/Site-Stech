@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 export async function POST(request) {
   //  Colocado aqui dentro para a Vercel não quebrar o build procurando a chave antes da hora
-  const resend = new Resend(p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDYJGJtJ1A9eaixsoZ/r0DNXHMvzBj9JxmYCTPjbC8ydSfIhYiASlBD7krNmNOt3i0uGPbCPI9v+cJ0GzOGw6nu/Cwdu6lpFwpSCGT8tN8Yau6nsANeNZYlV7UG8hT8GvIXEYBMBTBCnFNzy16cKUzBCzfb6HaD96jYE/bx1Y+wHQIDAQAB);
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
     const body = await request.json();
