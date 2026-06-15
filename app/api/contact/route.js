@@ -19,7 +19,7 @@ export async function POST(request) {
     // Envio com o Resend
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "moura.stechcompany@gmail.com; mateusenrico1@hotmail.com",
+      to: ["moura.stechcompany@gmail.com", "mateusenrico1@hotmail.com"],
       replyTo: email,
       subject: "Novo contato pelo site STECH",
       html: `
