@@ -22,13 +22,14 @@ export function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formState),
-      });
+      // Substitua a linha antiga do fetch por esta:
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || ''}/api/contact`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formState),
+        });
 
       if (!response.ok) {
         throw new Error("Erro ao enviar");
